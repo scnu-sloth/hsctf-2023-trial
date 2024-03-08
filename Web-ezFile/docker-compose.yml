@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./src:/var/www/html
+      - ./upload:/var/www/html/upload
+    ports:
+      - "20080:80"
