@@ -1,0 +1,12 @@
+version: '2'
+services:
+    python:
+        build: ./
+        # 端口映射
+        volumes:
+            - ./app.py:/app/app.py
+            - ./upload:/app/uploads/
+        ports:
+            - "6656:5000"
+        # 容器名称
+        container_name: "compose-python"
